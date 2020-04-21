@@ -22,7 +22,7 @@ class Player
     def gets_damage (damage)
         @life_points -= damage
         if @life_points <= 0
-            puts "La prétendante au trône de Bretagne #{@name} est morte"
+            puts "Le prétendant au trône de Bretagne #{@name} est mort"
         end
     end
     

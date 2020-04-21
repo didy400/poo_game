@@ -18,7 +18,7 @@ player1 = Player.new("Ivain le chevalier au lion")
 player2 = Player.new("Govain le petit pedestre dont un au lion")
 players = [player1,player2]
 
-while human1.life_points > 0 || (player1.life_points > 0 && player2 > 0)
+while human1.life_points > 0 && (player1.life_points > 0 || player2.life_points > 0)
     human1.show_state
     puts "Que veux tu faire?"
     puts "\na - chercher un moyen pour mieux pouvoir attaquer ces monstreux Lapins Adultes"
@@ -34,16 +34,16 @@ while human1.life_points > 0 || (player1.life_points > 0 && player2 > 0)
     end
     print "--->"
     choice = gets.chomp
-    if choice == "b"
+    if choice == "s"
         human1.search_health_pack
     elsif choice == "a"
         human1.seach_weapon
-    elsif choice == 0
+    elsif choice == "0"
         human1.attacks(player1)
-    elsif choice == 1
+    elsif choice == "1"
         human1.attacks(player2)
     else
-        "Encore cette chançon qui reste....\n
+      puts  "Encore cette chançon qui reste....\n
         \nMon petit oiseau\n
         A pris sa volée\n
         Mon petit oiseau\n
